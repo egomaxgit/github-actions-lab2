@@ -5,6 +5,10 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os:
+        py-version:
     steps:
     - name: Set up Python
       uses: actions/setup-python@v5
